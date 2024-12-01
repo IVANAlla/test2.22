@@ -1,17 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Alla
-  Date: 01.12.2024
-  Time: 0:14
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<
 <head>
-    <title>Title</title>
+    <title>List of Cars</title>
 </head>
 <body>
+<header>
+    <h2>ALL CARS</h2>
+</header>
 
-<a href="car">FFGDJGHJDKHGDH</a>
+<div>
+    <th:block th:each="msg : ${cars}">
+        <h1 th:text="${msg}"></h1>
+    </th:block>
+</div>
+
 </body>
 </html>
+</html>
+
+

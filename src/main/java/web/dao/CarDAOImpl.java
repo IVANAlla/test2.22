@@ -5,10 +5,9 @@ import web.modols.Car;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
-public class CarDAO {
+public class CarDAOImpl {
     private int count = 0;
     private List<Car> cars = new ArrayList<>();
 
