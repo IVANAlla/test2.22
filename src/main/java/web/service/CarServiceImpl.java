@@ -1,16 +1,19 @@
 package web.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import web.modols.Car;
+import web.models.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CarServiceImpl {
+public class CarServiceImpl implements CarService {
     private int count = 0;
+
     private List<Car> cars = new ArrayList<>();
+
+    public CarServiceImpl() {}
 
     {
         cars.add(new Car("Mercedes", "White", 777));
@@ -19,7 +22,10 @@ public class CarServiceImpl {
         cars.add(new Car("Lada", "Red", 999));
         cars.add(new Car("Ford", "White", 347));
     }
-
+    @Autowired
+    public CarServiceImpl(List<Car> cars) {
+        this.cars = cars;
+    }
     public List<Car> getCarCount(int count) {
         if (count < 5) {
             return  cars.subList(0, count);

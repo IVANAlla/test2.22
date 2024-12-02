@@ -1,6 +1,7 @@
 package web.service;
 
-import web.modols.Car;
+import org.springframework.beans.factory.annotation.Autowired;
+import web.models.Car;
 
 import java.util.List;
 
