@@ -1,13 +1,14 @@
-package web.dao;
+package web.service;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import web.modols.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class CarDAOImpl {
+@Service
+public class CarServiceImpl {
     private int count = 0;
     private List<Car> cars = new ArrayList<>();
 
@@ -17,10 +18,6 @@ public class CarDAOImpl {
         cars.add(new Car("BMW", "Grey", 139));
         cars.add(new Car("Lada", "Red", 999));
         cars.add(new Car("Ford", "White", 347));
-    }
-    public List<Car> getCarsAll() {
-        return cars;//.stream().limit(count).collect(Collectors.toList());
-
     }
 
     public List<Car> getCarCount(int count) {
